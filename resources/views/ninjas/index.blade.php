@@ -1,8 +1,6 @@
 <x-layout>
     <h2>Currently Available Ninjas</h2>
 
-    <p>{{ $greeting }}</p>
-
     <ul>
        @foreach ($ninjas as $ninja)
            <li>
