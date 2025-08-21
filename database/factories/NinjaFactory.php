@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Dojo;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,9 +18,10 @@ class NinjaFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => fake()->name(),
-            'bio' => fake()->realText(500),
-            'skill' => fake()->numberBetween(0, 100)
+            'name'    => fake()->name(),
+            'bio'     => fake()->realText(500),
+            'skill'   => fake()->numberBetween(0, 100),
+            'dojo_id' => Dojo::inRandomOrder()->first()->id
         ];
     }
 }
